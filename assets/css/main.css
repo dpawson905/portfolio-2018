@@ -1,0 +1,22 @@
+.bg-hero {
+  background-color: #120703;
+}
+
+.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../images/hero.jpg);
+  min-height: 100vh;
+  min-width: auto;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.hero-text-box {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
