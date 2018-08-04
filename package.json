@@ -1,0 +1,22 @@
+{
+  "name": "portfolio-2018",
+  "version": "1.0.0",
+  "description": "New portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dpawson905/portfolio-2018.git"
+  },
+  "keywords": [
+    "portfolio"
+  ],
+  "author": "Darrell Pawson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dpawson905/portfolio-2018/issues"
+  },
+  "homepage": "https://github.com/dpawson905/portfolio-2018#readme"
+}
