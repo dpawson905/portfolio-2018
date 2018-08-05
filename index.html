@@ -14,64 +14,188 @@
   <link rel="mask-icon" href="assets/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
   <link rel="stylesheet" href="assets/vendors/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/vendors/css/animate.min.css">
   <link rel="stylesheet" type="text/css" media="screen" href="assets/css/main.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="assets/css/nav.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="assets/css/media.css">
 
 </head>
 
 <body>
-  <header class="hero">
-    <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-dark bg-hero">
-        <a class="navbar-brand" href="#">Darrell Pawson</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-          aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+  <!-- Begin Navigation -->
+  <div class="navigation">
+    <input type="checkbox" class="navigation__checkbox" name="navi-toggle" id="navi-toggle">
+    <label for="navi-toggle" class="navigation__button">
+      <span class="navigation__icon">&nbsp;</span>
+    </label>
+    <div class="navigation__background">&nbsp;</div>
+    <nav class="navigation__nav">
+      <ul class="navigation__list">
+        <li class="navigation__item">
+          <a href="#" class="navigation__link">
+            <span>01</span>About Me</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#" class="navigation__link">
+            <span>02</span>Skills Section</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#" class="navigation__link">
+            <span>03</span>Certifications</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#" class="navigation__link">
+            <span>04</span>Testimonials</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#" class="navigation__link">
+            <span>05</span>Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- End Navigation -->
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Blog</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-                aria-expanded="false">
-                Projects
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
+  <!-- Begin Hero -->
+  <div class="bg-light1">
+    <header class="hero">
+      <div class="hero-text-box">
+        <h1 class="heading-primary">Darrell Pawson &mdash;
+          <br>
+          <span class="heading-primary--sub">Full Stack Web Developer</span>
+        </h1>
+      </div>
+    </header>
+  </div>
+  <!-- End Hero -->
+
+  <!-- Begin About -->
+  <div class="bg-light1">
+    <div class="about-box">
+      <section class="container about-section">
+        <h2 class="text-center heading-secondary">About me</h2>
+        <div class="row user-photo-box">
+          <div class="col-md  user-photo-box">
+            <img class="img-fluid rounded-circle border border-info photo" src="/assets/images/profile_pic.jpg" alt="Darrell Pawson">
+          </div>
+          <div class="col-md">
+            <p class="long-copy">
+              <span id="hello"></span> my name is Darrell Pawson and I am a Full Stack Web Developer from Asheboro, N.C. I started off learning
+              Python and then decided to dive into learning JavaScript and haven't looked back. I still write helpful scripts
+              in Python for tasks at home but I am facinated with JavaScript and Node.js. I am still learning as I go, and
+              one thing that I have learned is that practicing every day and utilizing google and other helpful websites
+              like Stack Overflow have made my life a lot easier. Please, feel free to check out my other projects or read
+              my
+              <a href="https://blog.djpawson.me" target="_blank">blog</a> to get to know me and my work a little more. Or if you are interested in hiring me for a project,
+              feel free to email me at the button below
+            </p>
+            <button type="button" class="btn btn-primary btn-fix" data-toggle="modal" data-target="#exampleModalCenter">
+              Contact me
+            </button>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title txt-big" id="exampleModalLongTitle">Contact Me</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form action="#" method="POST">
+                      <div class="form-group row">
+                        <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg txt-md">Name</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Your Name" required>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg txt-md">Email</label>
+                        <div class="col-sm-10">
+                          <input type="email" class="form-control form-control-lg" id="colFormLabelLg" placeholder="email@email.com" required>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg txt-md">Message</label>
+                        <div class="col-sm-10">
+                          <textarea class="form-control form-control-lg" cols="10" rows="15" id="colFormLabelLg" placeholder="Message" required> </textarea>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="submit" class="btn btn-secondary">Send Message</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
               </div>
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
-      </nav>
-      <h1 class="hero-text-box">Darrell Pawson &mdash;
-        <br>
-        <span class="small">Full Stack Web Developer</span>
-      </h1>
+      </section>
     </div>
-  </header>
-  <section class="container">
 
-  </section>
+  </div>
 
+  <div>
+    <section class="container skills-box">
+      <h2 class="text-center heading-secondary--adjusted">Skills</h2>
+      <div class="row">
+        <div class="col-md text-center skills">
+          <i class="fab fa-html5 fa-7x"></i>
+          <h3 class="skills-text" 3>HTML5</h3>
+          <p class="lead">Code meets HTML5 standards.</p>
+        </div>
+        <div class="col-md text-center skills">
+          <i class="fab fa-css3-alt fa-7x"></i>
+          <h3 class="skills-text" 3>CSS3</h3>
+          <p class="lead">Code meets CSS3 standards.</p>
+        </div>
+        <div class="col-md text-center skills">
+          <i class="fab fa-js-square fa-7x"></i>
+          <h3 class="skills-text">JavaScript</h3>
+          <p class="lead">Code uses the latest ES2015 and later standards.</p>
+        </div>
+        <div class="col-md text-center skills">
+          <i class="fab fa-node fa-7x"></i>
+          <h3 class="skills-text">Node.js</h3>
+          <p class="lead">Backend code utilizes Node.js.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md text-center skills">
+          <i class="fas fa-database fa-7x"></i>
+          <h3 class="skills-text">MongoDB</h3>
+          <p class="lead">MogoDB is my go-to database.</p>
+        </div>
+        <div class="col-md text-center skills">
+          <i class="fab fa-searchengin fa-7x"></i>
+          <h3 class="skills-text">Clean and fast code</h3>
+          <p class="lead">Code is written clean and efficiently.</p>
+        </div>
+        <div class="col-md text-center skills">
+          <i class="fab fa-php fa-7x"></i>
+          <h3 class="skills-text">PHP</h3>
+          <p class="lead">Still learning PHP ... TBA</p>
+        </div>
+        <div class="col-md text-center skills">
+          <i class="fas fa-mobile fa-7x"></i>
+          <h3 class="skills-text">Mobile Optimized</h3>
+          <p class="lead">Websites are SEO and Mobile Friendly</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- End About -->
   <script src="assets/vendors/js/jquery-3.3.1.min.js"></script>
   <script src="assets/vendors/js/jquery.waypoints.min.js"></script>
   <script src="assets/vendors/js/popper.min.js"></script>
   <script src="assets/vendors/js/bootstrap.bundle.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js" integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy"
+    crossorigin="anonymous"></script>
   <script src="assets/js/main.js"></script>
 </body>
 

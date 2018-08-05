@@ -1,15 +1,133 @@
+@-webkit-keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-25rem);
+    transform: translateX(-25rem);
+  }
+  80% {
+    -webkit-transform: translateX(1rem);
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-25rem);
+    transform: translateX(-25rem);
+  }
+  80% {
+    -webkit-transform: translateX(1rem);
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
+
+@-webkit-keyframes moveInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(50rem);
+    transform: translateX(50rem);
+  }
+  80% {
+    -webkit-transform: translateX(-1rem);
+    transform: translateX(-1rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(50rem);
+    transform: translateX(50rem);
+  }
+  80% {
+    -webkit-transform: translateX(-1rem);
+    transform: translateX(-1rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
+
+@-webkit-keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(3rem);
+    transform: translateY(3rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(3rem);
+    transform: translateY(3rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
+/* Initial Setup */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  text-rendering: optimizeLegibility;
+}
+
+.bg-light1 {
+  background-color: #efefef;
+}
+
+/* Hero Setup */
+
 .bg-hero {
   background-color: #120703;
 }
 
 .hero {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
     url(../images/hero.jpg);
-  min-height: 100vh;
+  min-height: 95vh;
   min-width: auto;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative;
 }
 
 .hero-text-box {
@@ -19,4 +137,108 @@
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+
+.heading-primary {
+  font-size: 6rem;
+  font-weight: 400;
+  letter-spacing: 1.5rem;
+  text-transform: uppercase;
+  animation: moveInLeft 1s ease-out;
+}
+
+.heading-primary--sub {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1.15rem;
+  animation: moveInRight 1s ease-out;
+}
+
+/* About Section */
+.about-box {
+  position: relative;
+}
+.about-section {
+  padding: 50px 0;
+  height: 80vh;
+}
+
+.heading-secondary {
+  font-size: 4rem;
+  text-transform: uppercase;
+  margin-bottom: 70px;
+}
+
+.heading-secondary--adjusted {
+  font-size: 4rem;
+  text-transform: uppercase;
+  margin-bottom: 70px;
+  margin-top: 150px;
+}
+
+.heading-secondary:after {
+  display: block;
+  height: 2px;
+  background-color: #4268b2;
+  content: "";
+  width: 150px;
+  margin: 15px auto;
+}
+
+.heading-secondary--adjusted:after {
+  display: block;
+  height: 2px;
+  background-color: #4268b2;
+  content: "";
+  width: 150px;
+  margin: 15px auto;
+}
+
+.long-copy {
+  font-size: 2rem;
+  letter-spacing: 1.25px;
+}
+
+.user-photo-box {
+  position: relative;
+}
+
+.photo {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Skills */
+.skills-box {
+  margin-bottom: 150px;
+  padding: 25px 0;
+}
+
+.skills {
+  padding: 25px;
+}
+
+.skills-text {
+  padding: 10px;
+}
+
+svg {
+  color: steelblue;
+}
+
+.btn-fix {
+  font-size: 2rem;
+  width: 30%;
+  margin-left: 35%;
+  margin-top: 10px;
+}
+
+.txt-big {
+  font-size: 3rem;
+}
+
+.txt-md {
+  font-size: 1.5rem;
 }
