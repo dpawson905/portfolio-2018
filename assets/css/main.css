@@ -158,10 +158,11 @@ body {
 /* About Section */
 .about-box {
   position: relative;
+  height: 100%;
 }
 .about-section {
   padding: 50px 0;
-  height: 80vh;
+  height: 85vh;
 }
 
 .heading-secondary {
@@ -210,24 +211,6 @@ body {
   transform: translateY(-50%);
 }
 
-/* Skills */
-.skills-box {
-  margin-bottom: 150px;
-  padding: 25px 0;
-}
-
-.skills {
-  padding: 25px;
-}
-
-.skills-text {
-  padding: 10px;
-}
-
-svg {
-  color: steelblue;
-}
-
 .btn-fix {
   font-size: 2rem;
   width: 30%;
@@ -235,10 +218,34 @@ svg {
   margin-top: 10px;
 }
 
+/* Skills */
+.skills-box {
+  margin-bottom: 150px;
+  padding: 25px 0;
+}
+.skills {
+  padding: 25px;
+}
+.skills-text {
+  padding: 10px;
+}
+svg {
+  color: steelblue;
+}
 .txt-big {
   font-size: 3rem;
 }
-
 .txt-md {
   font-size: 1.5rem;
+}
+.animate-right {
+  animation: moveInRight 1s ease-out;
+}
+.animate-left {
+  animation: moveInLeft 1s ease-out;
+}
+/* Work Section */
+.work-section {
+  padding: 50px 0;
+  height: 80vh;
 }
